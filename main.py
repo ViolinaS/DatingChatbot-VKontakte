@@ -216,7 +216,7 @@ def get_user_relation_data():
 
 
 def execute_search():
-  wanted_users = bot_2.users.search(offset=0, count=1000, is_closed=0, has_photo=1, country_id=1, 
+  wanted_users = bot_2.users.search(sort=0, offset=0, count=1000, is_closed=0, has_photo=1, country_id=1, 
                                     city_id=city, sex=sex, bdate=bdate, relation=relation)
   users_ids = [user['id'] for user in wanted_users['items']]
   return users_ids
@@ -311,7 +311,7 @@ if __name__ == '__main__':
      Выбор кандидата происходит произвольно каждый раз из новой (+-) 1000 человек, предсказать
      кто окажется им/ей невозможно. Бот крутит колесо фортуны:)))...
      Бот будет предлагать варианты пока пользователю не надоест смотреть шоу 
-     или сервер VK не выкинет наглого бота (так уже было)
+     или сервер VK не отключит бота.
      Бот не будет предлагать повторно то, что пользователь уже видел, для этого
      у Бота есть 2 списка: избранное для лучших и черный список для остальных...
      Новую команду 'Привет' после кнопок 'ОТМЕНА' и 'STOP' Бот определяет как нового пользователя,
