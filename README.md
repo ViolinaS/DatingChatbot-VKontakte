@@ -28,6 +28,6 @@
 
 * заменить название базы vkinder на свою в файле [PostgreSQL](https://github.com/ViolinaS/VkAPI-DatingChatbot/blob/main/postgreSQL_db.py) или создать базу vkinder
 
-3. Установить недостающие библиотеки - []()
+3. Установить недостающие библиотеки - [requirements](https://github.com/ViolinaS/VkAPI-DatingChatbot/blob/main/requirements.txt)
 
 3. Бот активируется словом "Привет" в чате ВКонтакте.
