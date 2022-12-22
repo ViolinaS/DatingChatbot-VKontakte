@@ -26,7 +26,7 @@
 1. Заполнить в файле [configdata](https://github.com/ViolinaS/VkAPI-DatingChatbot/blob/main/configdata.py): access_token(токен пользователя), postgres_password, group_id(идентификатор сообщества), group_token(токен сообщества)
 2. Корректно указать путь к базе PostgreSQL, где будут созданы таблицы для работы Бота:
 
-* заменить название базы vkinder на свою в файле [PostgreSQL](https://github.com/ViolinaS/VkAPI-DatingChatbot/blob/main/postgreSQL_db.py) или создать базу vkinder
+*заменить название базы vkinder на свою в файле [PostgreSQL](https://github.com/ViolinaS/VkAPI-DatingChatbot/blob/main/postgreSQL_db.py) или создать базу vkinder*
 
 3. Установить недостающие библиотеки - [requirements](https://github.com/ViolinaS/VkAPI-DatingChatbot/blob/main/requirements.txt)
 
