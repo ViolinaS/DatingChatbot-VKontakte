@@ -5,12 +5,14 @@ from vk_api.longpoll import VkLongPoll, VkEventType
 from vktools import Keyboard, ButtonColor, Text
 import random
 from sqlalchemy.orm import sessionmaker
-from datetime import datetime, date
+from datetime import datetime, timedelta
 from postgreSQL_db import engine, Base, User, Wanted_user, Black_list
 
 
-"""Клавиатуры для работы в чате
+"""Клавиатуры и константы для работы в чате
 """
+FUTUREDATE = datetime.now() + timedelta(days=10)
+
 RELATION_DATA_RULE = ["в активном\n поиске", "не женат\n/не замужем", "все сложно"]
 RELATION_KEYBOARD = Keyboard(one_time=True, inline=False, button=
     [
@@ -150,8 +152,8 @@ def get_bdate_from_data():
       for event in longpoll_1.listen():
         if event.type == VkEventType.MESSAGE_NEW and event.to_me and user_id == event.user_id:
           user_bdate = event.text
-          print(user_bdate)
           break
+            
       try:
         datetime.strptime(user_bdate, '%m.%d.%Y').date()
         break
@@ -165,6 +167,15 @@ def get_bdate_from_data():
   else:
     user_bdate = user_bdate[0]["bdate"]
   return user_bdate
+
+
+def get_user_age():
+  birth_year_data = bdate
+  birth_year_number = birth_year_data[-4:]
+  birth_year_int = int(birth_year_number)
+  current_year = FUTUREDATE.year
+  user_age = current_year - birth_year_int
+  return user_age
 
 
 """VK_API 
@@ -346,6 +357,7 @@ if __name__ == '__main__':
     get_user_data(user_id=user_id)
     city = get_city_from_data()
     bdate = get_bdate_from_data()
+    user_age = get_user_age()
     sex = get_sex_from_data()
     relation = get_user_relation_data()
     send_message(user_id, f"Согласно вашему профилю, Я буду искать для Вас пару в :\n"
