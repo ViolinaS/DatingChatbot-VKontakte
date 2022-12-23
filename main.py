@@ -337,6 +337,7 @@ if __name__ == '__main__':
     bot_1 = session_1.get_api()
     bot_2 = session_2.get_api()
     
+    """получение ID юзера из сообщения"""
     user_id = get_current_user_id()
       
     """для работы с базой"""
@@ -348,7 +349,7 @@ if __name__ == '__main__':
     session.commit()
   
    
-    """Запуск Бота в Вконтакте и получение ID юзера из сообщения"""  
+    """получение имени юзера из сообщения и запуск Бота Вконтакте"""  
     name_from_id(user_id=user_id)
     vkinder_say_hi(user_id)
   
