@@ -360,9 +360,9 @@ if __name__ == '__main__':
     user_age = get_user_age()
     sex = get_sex_from_data()
     relation = get_user_relation_data()
-    send_message(user_id, f"Согласно вашему профилю, Я буду искать для Вас пару в :\n"
-                 f"в городе - {city}, по дате рождения - {bdate},\n"
-                 f"противоположного пола - {sex}, искомый статус - {relation}")
+    send_message(user_id, f"Согласно вашему профилю, Я буду искать для Вас пару:\n"
+                 f"в городе по ID: {city}, по вашей дате рождения: {bdate},\n возраст кандидатов: {user_age}\n"
+                 f"противоположного пола [Мужской - ID 2, Женский - ID 1]: {sex},\n искомый статус: {relation}")
   
     """Поиск и выдача и результатов:"""
     send_message(user_id, f"Готов(а) приступить к поиску? Жми 'START' или 'STOP', если нет", keyboard=ACTIVATION_KEYBOARD)
