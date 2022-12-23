@@ -228,7 +228,7 @@ def get_user_relation_data():
 
 def execute_search():
   wanted_users = bot_2.users.search(sort=0, offset=0, count=1000, is_closed=0, has_photo=1, country_id=1, 
-                                    age_from=user_age, age_to=user_age, city_id=city, sex=sex, relation=relation)
+                                    status=relation, age_from=user_age, age_to=user_age, city_id=city, sex=sex, relation=relation)
   users_ids = [user['id'] for user in wanted_users['items']]
   return users_ids
 
