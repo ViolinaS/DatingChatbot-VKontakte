@@ -13,13 +13,13 @@ from postgreSQL_db import engine, Base, User, Wanted_user, Black_list
 """
 FUTUREDATE = datetime.now() + timedelta(days=10)
 
-RELATION_DATA_RULE = ["в активном\n поиске", "не женат\n/не замужем", "все сложно"]
+RELATION_DATA_RULE = ["в активном поиске", "не женат/не замужем", "все сложно"]
 RELATION_KEYBOARD = Keyboard(one_time=True, inline=False, button=
     [
         [
             
-            Text("в активном\n поиске", ButtonColor.POSITIVE),
-            Text("не женат\n/не замужем", ButtonColor.PRIMARY)
+            Text("в активном поиске", ButtonColor.POSITIVE),
+            Text("не женат/не замужем", ButtonColor.PRIMARY)
             
         ],
         [
