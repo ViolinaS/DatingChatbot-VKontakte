@@ -437,13 +437,13 @@ if __name__ == '__main__':
         babe_surname = get_random_babe_surname()
         get_wanted_3_photos(babe_id)
         
-        q1 = select(Wanted_user.id_wanted_user).where(
+        q1_wanted_request = select(Wanted_user.id_wanted_user).where(
                     Wanted_user.user_id == user_id)
-        q2 = select(Black_list.id_notwanted_user).where(
+        q2_blacklist_request = select(Black_list.id_notwanted_user).where(
                     Black_list.user_id == user_id)
-        q1_res = session.execute(q1)
-        q2_res = session.execute(q2)
-        if q1_res or q2_res == True:
+        q1_result = session.execute(q1_wanted_request)
+        q2_result = session.execute(q2_blacklist_request)
+        if q1_result or q2_result == True:
           prepare_tostart_show()
           send_message(user_id, f"Нравится?, жми на клавиатуре ДА либо НЕТ", keyboard=YES_OR_NO_KEYBOARD)
           for event in longpoll_1.listen():
