@@ -1,5 +1,5 @@
 # Чат Бот для знакомств в Vkontakte
-![Python](https://img.shields.io/badge/PYTHON-3.8.6-yellow/?style=for-the-badge&color=9cf&logo=python&labelColor=brown) ![vkapi](https://img.shields.io/badge/Vkontakte-VkAPI-informational/?style=for-the-badge&color=informational&logo=vkontakte) ![Postgres](https://img.shields.io/badge/Database-PostgreSQL-orange/?style=for-the-badge&color=red&logo=postgresql&labelColor=black&link=https://www.postgresql.org)
+![Python](https://img.shields.io/badge/PYTHON-3.8.6-yellow/?style=for-the-badge&color=9cf&logo=python&labelColor=brown) ![vkapi](https://img.shields.io/badge/Vkontakte-VkAPI-informational/?style=for-the-badge&color=informational&logo=vkontakte) ![Postgres](https://img.shields.io/badge/Database-PostgreSQL-orange/?style=for-the-badge&color=red&logo=postgresql&labelColor=black&link=https://www.postgresql.org) ![alchemy](https://img.shields.io/badge/-SQLALCHEMY-yellowgreen/?style=for-the-badge&color=darkslategrey&logo=python)
 ## Dating Chat Bot for Vkontakte social network
 ### Задачи которые выполняет Бот:
 1. Ищет людей, подходящих под условия, на основании информации о пользователе из VK:
